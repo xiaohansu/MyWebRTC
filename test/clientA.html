@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ClientA</title>
+    <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+
+</head>
+
+<body>
+    <div class="video_container" align="center">
+        <video id="remote_video" poster="/img/video_fill.jpg" controls autoplay></video>
+    </div>
+    <div>
+        <button id="startButton">offer</button>
+        <button id="test">test</button>
+        <button id="sendMsg">sendmsg</button>
+        <select id="bandwidth" disabled>
+            <option value="unlimited" selected>unlimited</option>
+            <option value="2000">2000</option>
+            <option value="1000">1000</option>
+            <option value="500">500</option>
+            <option value="250">250</option>
+            <option value="125">125</option>
+        </select>
+        kbps
+    </div>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+    <!-- <script src="static/adapter-latest.js"></script> -->
+    <script src="/test/clientA.js"></script>
+</body>
+
+</html>
