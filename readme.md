@@ -43,4 +43,16 @@ let httpsServer = https.createServer(cert, app);
 
 ```
 
-**chrome不安全链接提醒：鼠标点击浏览器空白处，键如：thisisundafe，回车***
+**chrome不安全链接提醒：鼠标点击浏览器空白处，键入：thisisundafe，回车**
+
+
+## 学习链接
+https://www.w3.org/TR/webrtc/#intro
+
+https://webrtc.github.io/samples/
+
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+
+https://janus.conf.meetecho.com/docs/README.html
+
+https://hpbn.co/webrtc/
