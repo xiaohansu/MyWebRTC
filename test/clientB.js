@@ -1,11 +1,15 @@
 "use strict";
 
 var socket = io.connect();
-var remoteVideo = document.getElementById('remote_video');
-var socketTestBtn = document.getElementById('socketTest')
+var localVideo = document.getElementById("local_video");
+var remoteVideo = document.getElementById("remote_video");var socketTestBtn = document.getElementById('socketTest')
 var dataChannel;
 socket.emit("create or join", "room");
 
+navigator.mediaDevices.getUserMedia({audio:true,video:true}).then(mediastream=>{
+  console.log(mediastream.getTracks())
+  localVideo.srcObject = mediastream;
+})
 
 socketTestBtn.addEventListener('click',socketTest);
 function socketTest(){

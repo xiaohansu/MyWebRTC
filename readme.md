@@ -2,11 +2,11 @@
 项目的主要目的适用于webrtc的学习，记录一些学习过程，还有一些操作备注
 
 ## 项目内容
-> alice & bob
+> clientA & clientB
 
 模拟点对点的视屏通话
 
-> clientA & clientB
+> alice & bob
 
 单方向视屏传播（类似主播模式）
 

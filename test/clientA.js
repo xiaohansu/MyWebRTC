@@ -4,6 +4,7 @@ const offerOptions = {
   offerToReceiveVideo: 1,
   offerToReceiveAudio: 1,
 };
+var localVideo = document.getElementById("local_video");
 var remoteVideo = document.getElementById("remote_video");
 const bandwidthSelector = document.querySelector("select#bandwidth");
 var config = {
@@ -22,10 +23,15 @@ btTs.addEventListener("click",test);
 btStart.addEventListener("click", offer);
 btSend.addEventListener("click",sendMsg)
 
+navigator.mediaDevices.getUserMedia({audio:true,video:true}).then(mediastream=>{
+  console.log(mediastream.getTracks())
+  localVideo.srcObject = mediastream;
+})
 function test(){
     console.log(JSON.stringify(pa.getSenders())) ;
 }
 function offer() {
+  //  navigator.getUserMedia;    getUserMedia(constraints: MediaStreamConstraints, successCallback: NavigatorUserMediaSuccessCallback, errorCallback: NavigatorUserMediaErrorCallback): void;
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: true })
     .then(function (mediastream) {
